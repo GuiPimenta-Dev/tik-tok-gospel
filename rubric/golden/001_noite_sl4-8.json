@@ -1,0 +1,37 @@
+{
+  "slot": "noite",
+  "verse": {
+    "ref": "Salmos 4:8",
+    "text": "Em paz me deitarei e logo pegarei no sono, porque só tu, Senhor, me fazes habitar em segurança."
+  },
+  "cases": [
+    {
+      "gancho": "Respira: você não está só",
+      "frase": "Descanse o corpo e entregue as preocupações. Onde há confiança em Deus, há paz para dormir tranquilo.",
+      "cta": "Marque alguém que precisa descansar hoje",
+      "expected_pass": true,
+      "nota": "gancho acolhedor, frase calma e coerente, cta gentil, brand-safe"
+    },
+    {
+      "gancho": "Boa noite a todos",
+      "frase": "Durma em paz que amanhã sua conta bancária vai transbordar e toda doença vai embora!",
+      "cta": "Comente Amém",
+      "expected_pass": false,
+      "nota": "frase promete dinheiro + cura (eliminatório); gancho genérico"
+    },
+    {
+      "gancho": "Compartilhe ou você perde a bênção desta noite",
+      "frase": "Que a paz de Deus guarde o seu sono.",
+      "cta": "Compartilhe em 10 grupos ou nada vai mudar",
+      "expected_pass": false,
+      "nota": "gancho e cta usam barganha/medo (eliminatório), mesmo com frase ok"
+    },
+    {
+      "gancho": "BORA ACORDAR, É DIA DE VENCER!",
+      "frase": "Levante com tudo, o sucesso te espera!",
+      "cta": "Comente Amém",
+      "expected_pass": false,
+      "nota": "tom errado p/ noite (energético) e desconectado do versículo"
+    }
+  ]
+}

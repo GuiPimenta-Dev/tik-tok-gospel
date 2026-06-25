@@ -1,0 +1,108 @@
+# Config do nicho. Cada nicho novo = um arquivo destes, mesmo pipeline.
+niche: bom-dia
+language: pt-BR
+platform: tiktok
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  min_seconds: 12          # versículo+frase curtos rendem ~15-20s; 12s é piso saudável
+  max_seconds: 30          # TikTok short: teto de 30s
+  images: 3                # fotos por vídeo (crossfade suave entre elas)
+  crossfade: 1.0           # duração do crossfade (s)
+  tail: 4.0                # >=4s de música após a fala, terminando em fade-out suave
+
+eval:
+  k: 3                      # pass@k: nº de variações de frase geradas
+  prompt_version: v1
+  rubric: rubric/bom-dia.md
+  autonomous_gate: false    # v1 = copiloto. Só vira true após provar concordância.
+
+bible:
+  translation: ACF          # Almeida (domínio público)
+  dataset: data/bible/almeida.json
+  pool: data/verse_pool.json
+  ledger: data/used_verses.sqlite
+  reuse_after_days: 365
+
+tts:
+  provider: elevenlabs
+  model: eleven_multilingual_v2
+  # Tom sereno/calmo é a IDENTIDADE do canal — aplicado a TODAS as vozes.
+  settings:
+    stability: 0.65          # alto = entrega estável/serena, sem dramatizar
+    similarity_boost: 0.8
+    style: 0.0
+    use_speaker_boost: true
+  # Pool de vozes (rotação aleatória por vídeo) p/ não ficar monótono.
+  # Pode podar por ouvido ouvindo output/voice-samples/ (python -m src.voices).
+  voices:                                                   # só masculinas calmas/serenas
+    - {name: Bill,     id: pqHfZKP75CvOlQylNhV4, gender: m}  # mais velho, sábio
+    - {name: Brian,    id: nPczCjzI2devNBz1zQrb, gender: m}  # grave, sereno
+    - {name: George,   id: JBFqnCBsd6RMkjVDRZzb, gender: m}  # caloroso, narrativo
+    - {name: Thomas,   id: GBv7mTt0atIp3Br8iCZE, gender: m}  # calmo, meditativo
+    - {name: Adam,     id: pNInz6obpgDQGcFmaJgB, gender: m}  # grave, neutro
+    - {name: Antoni,   id: ErXwobaYiN019PkySvjV, gender: m}  # equilibrado, ameno
+    - {name: Josh,     id: TxGEqnHWrfWFTfGW9XjX, gender: m}  # grave, calmo
+    - {name: Michael,  id: flq6f7yk4E4fJM5XTYuZ, gender: m}  # mais velho
+    - {name: Giovanni, id: zcAOhNBS3c14rBihAFp1, gender: m}  # suave
+    - {name: Paul,     id: 5Q0t7uMcjvnagumLfvZi, gender: m}  # firme, sereno
+    # validadas p/ swap (ouça output/voice-samples/MV_*.mp3 e troque se quiser):
+    # Daniel onwK4e9ZLuTAKqWW03F9 | Arnold VR6AewLTigWG4xSOukaG | Clyde 2EiwWnXFnvU5JabPnv8n
+    # Will bIHbv24MWmeRgasZH58o | Liam TX3LPaxmHKxFdv7VOQHJ | Joseph Zlb1dXrM653N07WRdFW3
+    # Femininas removidas (soavam artificiais): Matilda, Lily.
+
+music:
+  enabled: true             # false = narração sem cama (ex: pra usar som nativo do TikTok)
+  dir: assets/music         # só royalty-free
+  volume_db: -20            # cama abaixo da voz (audível; voz ainda na frente)
+
+audio:
+  voice_db: -3              # leve redução da locução (TTS vem alto; evita estourar)
+
+# Hashtags: 4-5 por vídeo (1 ampla + 3 nicho + 1 do slot). Curadas e rotacionadas.
+hashtags:
+  broad: ["#fyp", "#foryou", "#paravoce", "#viral", "#tiktokcristão"]
+  niche: ["#versiculododia", "#deusnocontrole", "#palavradedeus", "#fé", "#gratidão",
+          "#oração", "#devocional", "#mensagemdefé", "#reflexãododia", "#deuséfiel",
+          "#salmos", "#gospel", "#fequemovemontanhas"]
+  n_niche: 3
+
+font:
+  path: assets/fonts/font.ttf
+  size: 64
+  color: white
+
+# Legibilidade do texto sobre a foto (ajuste de olho pelo antes/depois).
+overlay:
+  scrim: 0.40               # escurecimento de tela cheia (0-1) — uniformiza fotos
+  gradient: true            # halo escuro suave atrás do texto (look cinematográfico)
+  box_alpha: 0.30           # intensidade do escuro atrás do texto (0 = sem)
+
+# Cada slot: tema da imagem (query Pexels) + tom da voz/frase
+slots:
+  manha:
+    greeting: "Bom dia"
+    image_query: "sunrise flowers golden morning nature"
+    tone: "esperançoso e energético"
+    scrim: 0.30               # mais leve: foto da manhã respira
+    hashtag: "#bomdia"
+  tarde:
+    greeting: "Boa tarde"
+    image_query: "bright daylight nature peaceful field"
+    tone: "leve e grato"
+    scrim: 0.40
+    hashtag: "#boatarde"
+  noite:
+    greeting: "Boa noite"
+    image_query: "sunset starry night sky calm"
+    tone: "calmo e reflexivo"
+    scrim: 0.45               # mais escuro: combina com a noite
+    hashtag: "#boanoite"
+  semana:
+    greeting: ""              # derivado do dia da semana (ex: "Feliz quinta-feira")
+    weekday: true             # ESTE é o vídeo do dia da semana
+    image_query: "hopeful nature path morning light inspirational"
+    tone: "animado e encorajador para encarar o dia"
+    scrim: 0.35

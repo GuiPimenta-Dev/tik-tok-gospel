@@ -1,0 +1,8 @@
+requests>=2.31
+PyYAML>=6.0
+python-dotenv>=1.0
+Pillow>=10.0          # renderiza o texto (overlay PNG) — ffmpeg local não tem drawtext
+# LLM: NÃO usamos o SDK `anthropic` (API paga). Usamos o CLI do Claude Code
+#   (`claude -p --output-format json`) na sua SUBSCRIPTION — ver src/llm.py.
+# TTS: NÃO usamos o SDK `elevenlabs`. Chamamos a REST API via requests (src/media.py).
+# ffmpeg/ffprobe são binários do sistema (brew install ffmpeg), não pacotes pip.

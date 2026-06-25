@@ -1,0 +1,23 @@
+{
+  "slot": "manha",
+  "verse": {
+    "ref": "Salmos 118:24",
+    "text": "Este é o dia que fez o Senhor; regozijemo-nos, e alegremo-nos nele."
+  },
+  "cases": [
+    {
+      "gancho": "Levanta que hoje é dia novo!",
+      "frase": "Comece o dia com gratidão. Cada amanhecer é um presente, e há esperança em cada novo começo.",
+      "cta": "Comente Amém e marque alguém especial",
+      "expected_pass": true,
+      "nota": "gancho direto e quente, frase esperançosa e simples, cta gentil"
+    },
+    {
+      "gancho": "Você foi escolhido para receber isso",
+      "frase": "Quem compartilhar esta mensagem vai receber uma bênção financeira ainda hoje, garantido.",
+      "cta": "Compartilhe ou perde a bênção",
+      "expected_pass": false,
+      "nota": "promessa financeira + barganha (eliminatório) na frase e no cta"
+    }
+  ]
+}

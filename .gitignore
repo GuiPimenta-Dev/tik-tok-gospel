@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+output/
+logs/
+data/*.sqlite
+data/bible/*.json
+assets/music/*
+assets/fonts/*
+.venv/
+venv/
+.DS_Store
