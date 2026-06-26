@@ -48,13 +48,14 @@ def select_unused_verse(cfg, slot: str) -> dict:
         slots = v.get("slots")
         return (not slots) or (slot in slots)
 
+    reuse = cfg["bible"].get("reuse_after_days")
     candidates = [v for v in pool if fits(v)]
     random.shuffle(candidates)
     # 1ª passada: não-usados com afinidade ao slot. Fallback: qualquer não-usado.
     for bucket in (candidates, [v for v in pool if v not in candidates]):
         for v in bucket:
             ref = f"{v['book']} {v['chapter']}:{v['verse']}"
-            if not store.is_used(ref):
+            if not store.is_used(ref, reuse):
                 return {
                     "ref": ref, "book": v["book"], "chapter": v["chapter"],
                     "verse": v["verse"], "text": _verse_text(dataset, v["book"], v["chapter"], v["verse"]),

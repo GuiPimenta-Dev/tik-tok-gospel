@@ -7,7 +7,7 @@ import unicodedata
 import uuid
 from datetime import datetime, timezone
 
-from . import content, evaluation
+from . import content, evaluation, packaging
 from ..adapters import images, store, tts, video
 from ..config import path
 
@@ -68,10 +68,12 @@ def _strip_greeting(frase: str) -> str:
     return frase
 
 
-def run_slot(cfg, niche: str, slot: str, date_str: str, voice: dict = None) -> dict:
+def run_slot(cfg, niche: str, slot: str, date_str: str, voice: dict = None, on_progress=None) -> dict:
     run_id = uuid.uuid4().hex[:12]
     ts = datetime.now(timezone.utc).isoformat()
-    out_dir = path("output", date_str, slot)
+    # diretório de trabalho OCULTO e temporário; build_package leva o resultado p/ o
+    # bundle e cleanup_work() apaga isto no fim (output/ não fica com pastas de dia soltas).
+    out_dir = path("output", ".work", date_str, slot)
     os.makedirs(out_dir, exist_ok=True)
     print(f"\n=== {slot} ({run_id}) ===")
 
@@ -98,14 +100,16 @@ def run_slot(cfg, niche: str, slot: str, date_str: str, voice: dict = None) -> d
     if not hc["pass"]:
         print(f"  HARD FAIL: {hc}")
         return _record(cfg, niche, slot, run_id, ts, verse, variants,
-                       {"variants": [], "chosen_idx": None, "verdict": "FAIL"}, hc, out_dir, None)
+                       {"variants": [], "chosen_idx": None, "verdict": "FAIL"}, hc, out_dir, None,
+                       voice=voice, date_str=date_str)
 
     # 4. LLM-judge: pass@k -> escolhe a melhor frase
     jr = evaluation.judge(cfg, slot, verse, variants)
     chosen = jr.get("chosen_idx")
     print(f"  judge: {jr.get('verdict')} (chosen={chosen})")
     if jr.get("verdict") != "PASS" or chosen is None:
-        return _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc, out_dir, None)
+        return _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc, out_dir, None,
+                       voice=voice, date_str=date_str)
 
     chosen_variant = variants[chosen]
     gancho = _strip_greeting(chosen_variant.get("gancho", "")).strip()
@@ -143,33 +147,33 @@ def run_slot(cfg, niche: str, slot: str, date_str: str, voice: dict = None) -> d
     hc_video = evaluation.hard_checks(cfg, slot, verse, video_path=vid)
     print(f"  vídeo: {vid}  formato_ok={hc_video['pass']}")
 
-    # 9. pacote pronto (hashtags curadas: tag do tipo + 1 ampla + nicho)
+    # 9. pacote pronto — só os artefatos necessários: video.mp4 + caption.txt + hashtags.txt
     hashtags = _compose_hashtags(cfg, slot, weekday)
-    _write_package(out_dir, slot, greeting, verse, chosen_variant, voice, track, hashtags)
-    return _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc_video, out_dir, chosen)
+    _write_package(out_dir, chosen_variant, hashtags)
+    # limpa intermediários (não são artefatos): imagens + voz
+    for p in [*imgs, voice_path]:
+        if os.path.exists(p):
+            os.remove(p)
+    if on_progress:
+        on_progress()   # atualiza a pasta de revisão ao vivo
+    return _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc_video, out_dir, chosen,
+                   voice=voice, date_str=date_str)
 
 
-def _write_package(out_dir, slot, greeting, verse, variant, voice, track, hashtags):
-    # legenda e hashtags em arquivos SEPARADOS (hashtags vão só na legenda do post,
-    # nunca no texto do vídeo).
+def _write_package(out_dir, variant, hashtags):
+    """Grava só os artefatos que importam: caption.txt + hashtags.txt (video.mp4 já existe)."""
     with open(os.path.join(out_dir, "caption.txt"), "w", encoding="utf-8") as f:
         f.write(variant["caption"])
     with open(os.path.join(out_dir, "hashtags.txt"), "w", encoding="utf-8") as f:
         f.write(" ".join(hashtags))
-    with open(os.path.join(out_dir, "meta.json"), "w", encoding="utf-8") as f:
-        json.dump({
-            "slot": slot, "greeting": greeting, "verse_ref": verse["ref"],
-            "verse_text": verse["text"],
-            "gancho": variant.get("gancho", ""), "frase": variant["frase"],
-            "cta": variant.get("cta", ""),
-            "caption": variant["caption"], "hashtags": hashtags,
-            "voice": voice["name"], "voice_id": voice["id"],
-            "music": os.path.basename(track) if track else None,
-        }, f, ensure_ascii=False, indent=2)
 
 
-def _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc, out_dir, chosen):
+def _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc, out_dir, chosen,
+            voice=None, date_str=None):
     ch = evaluation.content_hash(verse["ref"], variants[chosen]["frase"] if chosen is not None else "")
+    # voz usada na locução, persistida no SQLite (metadata da run; NÃO é artefato).
+    # Permite, no futuro, achar qual voz gerou um vídeo e podá-la do pool.
+    voice_tag = f"{voice['name']} ({voice['id']})" if isinstance(voice, dict) else None
     row = {
         "run_id": run_id, "ts": ts, "niche": niche, "slot": slot,
         "verse_ref": verse["ref"], "verse_text": verse["text"],
@@ -183,6 +187,8 @@ def _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc, out_dir, chos
         "rubric_version": evaluation.rubric_version(cfg),
         "model_id": os.getenv("CLAUDE_MODEL", "claude-code-subscription"),
         "content_hash": ch,
+        "voice": voice_tag,
+        "date": date_str,
     }
     store.record_eval(row)
     # Só marca versículo como usado se o pacote foi de fato produzido (PASS).
@@ -191,21 +197,47 @@ def _record(cfg, niche, slot, run_id, ts, verse, variants, jr, hc, out_dir, chos
     return {"run_id": run_id, "verdict": jr.get("verdict"), "out_dir": out_dir}
 
 
-def run_batch(cfg, niche: str, date_str: str, only_slot: str = None) -> list:
-    """Roda os slots do dia, com vozes distintas (sorteia sem repetir entre slots)."""
+def run_batch(cfg, niche: str, date_str: str, bundle: str, only_slot: str = None,
+              force: bool = False, on_progress=None) -> list:
+    """Roda os slots de UM dia, com vozes distintas. Idempotente: pula slots cujo vídeo
+    já está NO BUNDLE (a não ser force=True). Retorna [{slot, status}] (ok|fail|skip)."""
     store.init()
     slots = [only_slot] if only_slot else list(cfg["slots"].keys())
-    pool = cfg["tts"]["voices"]
-    if len(slots) > 1 and len(pool) >= len(slots):
-        voice_map = dict(zip(slots, random.sample(pool, len(slots))))
-    else:
-        voice_map = {}
-    results = []
+    out, todo = [], []
     for slot in slots:
+        if not force and os.path.exists(packaging.video_dest(cfg, bundle, slot, date_str)):
+            out.append({"slot": slot, "status": "skip"})
+        else:
+            todo.append(slot)
+    pool = cfg["tts"]["voices"]
+    voice_map = (dict(zip(todo, random.sample(pool, len(todo))))
+                 if len(todo) > 1 and len(pool) >= len(todo) else {})
+    for slot in todo:
         try:
-            res = run_slot(cfg, niche, slot, date_str, voice=voice_map.get(slot))
-            print(f"  -> {res}")
-            results.append(res)
+            res = run_slot(cfg, niche, slot, date_str, voice=voice_map.get(slot), on_progress=on_progress)
+            out.append({"slot": slot, "status": "ok" if res.get("verdict") == "PASS" else "fail"})
         except Exception as e:  # noqa: BLE001 — loga e segue p/ próximo slot
             print(f"  ERRO em {slot}: {e}")
-    return results
+            out.append({"slot": slot, "status": "fail"})
+    return out
+
+
+def run_range(cfg, niche: str, dates: list, only_slot: str = None, force: bool = False) -> dict:
+    """Gera vários dias em sequência (idempotente). Imprime progresso + resumo final."""
+    store.init()
+    bundle = packaging.bundle_path(cfg, niche, dates)
+    print(f"📂 Acompanhe AO VIVO (atualize o navegador): {os.path.join(bundle, 'index.html')}\n")
+    on_progress = lambda: packaging.build_package(cfg, niche, dates, quiet=True)  # noqa: E731
+    on_progress()   # cria a pasta/html já no começo (mesmo vazio fica pronto pra abrir)
+    tot = {"ok": 0, "fail": 0, "skip": 0}
+    for d in dates:
+        print(f"\n########## {d} ##########")
+        for r in run_batch(cfg, niche, d, bundle, only_slot=only_slot, force=force, on_progress=on_progress):
+            tot[r["status"]] = tot.get(r["status"], 0) + 1
+            if r["status"] == "skip":
+                print(f"  (pula {r['slot']} — já existe)")
+    print(f"\n===== RESUMO: {tot['ok']} gerados · {tot['skip']} pulados · {tot['fail']} falhas "
+          f"· {len(dates)} dia(s) =====")
+    packaging.build_package(cfg, niche, dates)   # rebuild final (com print do caminho)
+    packaging.cleanup_work()   # apaga o working oculto; bundle já é autossuficiente
+    return tot

@@ -6,6 +6,7 @@ Dois arquivos:
 """
 import json
 import sqlite3
+from datetime import datetime, timezone
 
 from ..config import path
 
@@ -30,7 +31,9 @@ CREATE TABLE IF NOT EXISTS evals (
   prompt_version  TEXT NOT NULL,
   rubric_version  TEXT NOT NULL,
   model_id        TEXT NOT NULL,
-  content_hash    TEXT NOT NULL
+  content_hash    TEXT NOT NULL,
+  voice           TEXT,
+  date            TEXT
 );
 CREATE TABLE IF NOT EXISTS metrics (
   content_hash    TEXT PRIMARY KEY,
@@ -60,15 +63,32 @@ def _conn(db_path: str, schema: str) -> sqlite3.Connection:
 
 
 def init():
-    _conn(EVALS_DB, EVALS_SCHEMA).close()
+    with _conn(EVALS_DB, EVALS_SCHEMA) as c:
+        # migração leve: adiciona coluna `voice` em DBs antigos (sem perder dados)
+        cols = {r["name"] for r in c.execute("PRAGMA table_info(evals)")}
+        if "voice" not in cols:
+            c.execute("ALTER TABLE evals ADD COLUMN voice TEXT")
+        if "date" not in cols:
+            c.execute("ALTER TABLE evals ADD COLUMN date TEXT")
     _conn(LEDGER_DB, LEDGER_SCHEMA).close()
 
 
 # ---- ledger de versículos ----
 
-def is_used(ref: str) -> bool:
+def is_used(ref: str, reuse_after_days=None) -> bool:
+    """True se `ref` já foi usado. Com reuse_after_days, recicla: só conta como usado
+    se foi nos últimos N dias (rede de segurança — nunca esgota o pool)."""
     with _conn(LEDGER_DB, LEDGER_SCHEMA) as c:
-        return c.execute("SELECT 1 FROM used_verses WHERE ref=?", (ref,)).fetchone() is not None
+        row = c.execute("SELECT used_at FROM used_verses WHERE ref=?", (ref,)).fetchone()
+    if row is None:
+        return False
+    if not reuse_after_days:
+        return True
+    try:
+        used = datetime.fromisoformat(row["used_at"])
+        return (datetime.now(timezone.utc) - used).total_seconds() / 86400 < float(reuse_after_days)
+    except (ValueError, TypeError):
+        return True
 
 
 def mark_used(ref: str, run_id: str, used_at: str):

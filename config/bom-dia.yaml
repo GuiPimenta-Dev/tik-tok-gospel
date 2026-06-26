@@ -1,5 +1,6 @@
 # Config do nicho. Cada nicho novo = um arquivo destes, mesmo pipeline.
 niche: bom-dia
+name: gospel              # nome de exibição (usado no pacote de entrega)
 language: pt-BR
 platform: tiktok
 
@@ -24,7 +25,7 @@ bible:
   dataset: data/bible/almeida.json
   pool: data/verse_pool.json
   ledger: data/used_verses.sqlite
-  reuse_after_days: 365
+  reuse_after_days: 21      # recicla versículo após N dias (rede de segurança; nunca esgota)
 
 tts:
   provider: elevenlabs
@@ -42,8 +43,6 @@ tts:
     - {name: Brian,    id: nPczCjzI2devNBz1zQrb, gender: m}  # grave, sereno
     - {name: George,   id: JBFqnCBsd6RMkjVDRZzb, gender: m}  # caloroso, narrativo
     - {name: Thomas,   id: GBv7mTt0atIp3Br8iCZE, gender: m}  # calmo, meditativo
-    - {name: Adam,     id: pNInz6obpgDQGcFmaJgB, gender: m}  # grave, neutro
-    - {name: Antoni,   id: ErXwobaYiN019PkySvjV, gender: m}  # equilibrado, ameno
     - {name: Josh,     id: TxGEqnHWrfWFTfGW9XjX, gender: m}  # grave, calmo
     - {name: Michael,  id: flq6f7yk4E4fJM5XTYuZ, gender: m}  # mais velho
     - {name: Giovanni, id: zcAOhNBS3c14rBihAFp1, gender: m}  # suave

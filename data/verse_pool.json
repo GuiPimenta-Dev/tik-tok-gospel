@@ -1,5 +1,5 @@
 {
-  "_comment": "Pool curado de versículos conhecidos e inspiradores (livros reconhecíveis). Texto resolvido verbatim do dataset Almeida por (book, chapter, verse). 'slots' = afinidade de horário.",
+  "_comment": "Pool curado de versículos conhecidos/inspiradores, validados verbatim contra o dataset Almeida. 'slots' = afinidade de horário.",
   "verses": [
     {
       "book": "Salmos",
@@ -1017,6 +1017,2362 @@
       "book": "Apocalipse",
       "chapter": 21,
       "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 9,
+      "verse": 9,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 16,
+      "verse": 11,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 18,
+      "verse": 2,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 23,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 23,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 29,
+      "verse": 11,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 36,
+      "verse": 9,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 37,
+      "verse": 7,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 40,
+      "verse": 3,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 46,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 63,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 68,
+      "verse": 19,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 86,
+      "verse": 15,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 90,
+      "verse": 17,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 100,
+      "verse": 4,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 103,
+      "verse": 13,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 113,
+      "verse": 3,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 116,
+      "verse": 7,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 118,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 121,
+      "verse": 4,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 126,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 130,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 139,
+      "verse": 10,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 145,
+      "verse": 9,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 146,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 4,
+      "verse": 18,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 16,
+      "verse": 20,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 17,
+      "verse": 17,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Eclesiastes",
+      "chapter": 3,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 12,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 30,
+      "verse": 15,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 40,
+      "verse": 28,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 43,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 43,
+      "verse": 19,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 54,
+      "verse": 10,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 55,
+      "verse": 12,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 60,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 31,
+      "verse": 25,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 32,
+      "verse": 17,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 5,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 6,
+      "verse": 26,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 11,
+      "verse": 29,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 28,
+      "verse": 20,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Marcos",
+      "chapter": 5,
+      "verse": 36,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Lucas",
+      "chapter": 12,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 1,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 10,
+      "verse": 10,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 14,
+      "verse": 1,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 15,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 5,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 8,
+      "verse": 38,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 15,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 13,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "2 Coríntios",
+      "chapter": 1,
+      "verse": 3,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "2 Coríntios",
+      "chapter": 5,
+      "verse": 17,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse": 22,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Efésios",
+      "chapter": 2,
+      "verse": 10,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Filipenses",
+      "chapter": 4,
+      "verse": 4,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Colossenses",
+      "chapter": 3,
+      "verse": 15,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Hebreus",
+      "chapter": 4,
+      "verse": 16,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 1,
+      "verse": 3,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 16,
+      "verse": 9,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 17,
+      "verse": 8,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 25,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 30,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 31,
+      "verse": 3,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 33,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 34,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 34,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 34,
+      "verse": 19,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 37,
+      "verse": 3,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 42,
+      "verse": 8,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 57,
+      "verse": 1,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 62,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 86,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 91,
+      "verse": 4,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 95,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 100,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 103,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 118,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 119,
+      "verse": 114,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 121,
+      "verse": 3,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 8,
+      "verse": 17,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 10,
+      "verse": 22,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 15,
+      "verse": 13,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 16,
+      "verse": 24,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 19,
+      "verse": 21,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Eclesiastes",
+      "chapter": 3,
+      "verse": 12,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Eclesiastes",
+      "chapter": 11,
+      "verse": 7,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 33,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 46,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 40,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 26,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 17,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 31,
+      "verse": 13,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 7,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 11,
+      "verse": 30,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 5,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Marcos",
+      "chapter": 9,
+      "verse": 23,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Lucas",
+      "chapter": 6,
+      "verse": 38,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Lucas",
+      "chapter": 12,
+      "verse": 32,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 14,
+      "verse": 18,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 15,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 11,
+      "verse": 25,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Atos",
+      "chapter": 20,
+      "verse": 35,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 8,
+      "verse": 37,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 12,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 5,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 15,
+      "verse": 58,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 2,
+      "verse": 9,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "2 Coríntios",
+      "chapter": 9,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Gálatas",
+      "chapter": 5,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Efésios",
+      "chapter": 6,
+      "verse": 10,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Efésios",
+      "chapter": 4,
+      "verse": 32,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Filipenses",
+      "chapter": 3,
+      "verse": 14,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Colossenses",
+      "chapter": 3,
+      "verse": 2,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Hebreus",
+      "chapter": 6,
+      "verse": 19,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Tiago",
+      "chapter": 1,
+      "verse": 17,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Deuteronômio",
+      "chapter": 31,
+      "verse": 6,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 16,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 16,
+      "verse": 7,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 33,
+      "verse": 20,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 33,
+      "verse": 22,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 34,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 37,
+      "verse": 23,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 42,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 50,
+      "verse": 15,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 54,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 61,
+      "verse": 2,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 62,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 63,
+      "verse": 6,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 71,
+      "verse": 14,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 73,
+      "verse": 23,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 77,
+      "verse": 6,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 84,
+      "verse": 10,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 90,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 91,
+      "verse": 5,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 100,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 103,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 103,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 103,
+      "verse": 12,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 118,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 119,
+      "verse": 165,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 121,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 121,
+      "verse": 5,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 121,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 125,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 130,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 139,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 145,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 146,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 10,
+      "verse": 28,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 13,
+      "verse": 12,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 14,
+      "verse": 26,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 30,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Eclesiastes",
+      "chapter": 9,
+      "verse": 7,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 40,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 49,
+      "verse": 15,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 49,
+      "verse": 16,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 55,
+      "verse": 6,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 61,
+      "verse": 3,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 64,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 17,
+      "verse": 14,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 29,
+      "verse": 12,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 29,
+      "verse": 13,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 5,
+      "verse": 9,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 5,
+      "verse": 14,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 6,
+      "verse": 21,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 18,
+      "verse": 20,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Marcos",
+      "chapter": 10,
+      "verse": 27,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Lucas",
+      "chapter": 11,
+      "verse": 9,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 13,
+      "verse": 34,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 14,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 16,
+      "verse": 22,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 5,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 8,
+      "verse": 18,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 13,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Filipenses",
+      "chapter": 2,
+      "verse": 13,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Êxodo",
+      "chapter": 33,
+      "verse": 14,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 23,
+      "verse": 2,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 42,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 136,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 16,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 22,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 11,
+      "verse": 25,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Eclesiastes",
+      "chapter": 4,
+      "verse": 9,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 40,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 42,
+      "verse": 16,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 51,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Isaías",
+      "chapter": 30,
+      "verse": 21,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Jeremias",
+      "chapter": 33,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 6,
+      "verse": 25,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Mateus",
+      "chapter": 22,
+      "verse": 37,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Marcos",
+      "chapter": 12,
+      "verse": 30,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Lucas",
+      "chapter": 6,
+      "verse": 31,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 16,
+      "verse": 24,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Atos",
+      "chapter": 16,
+      "verse": 31,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 8,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 15,
+      "verse": 57,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "2 Coríntios",
+      "chapter": 4,
+      "verse": 18,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Gálatas",
+      "chapter": 2,
+      "verse": 20,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Efésios",
+      "chapter": 3,
+      "verse": 16,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse": 3,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Colossenses",
+      "chapter": 3,
+      "verse": 16,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Tessalonicenses",
+      "chapter": 5,
+      "verse": 16,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "2 Timóteo",
+      "chapter": 1,
+      "verse": 12,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Hebreus",
+      "chapter": 10,
+      "verse": 23,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Hebreus",
+      "chapter": 12,
+      "verse": 2,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Tiago",
+      "chapter": 1,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Pedro",
+      "chapter": 5,
+      "verse": 10,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Pedro",
+      "chapter": 1,
+      "verse": 3,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "2 Pedro",
+      "chapter": 3,
+      "verse": 18,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 João",
+      "chapter": 5,
+      "verse": 4,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Apocalipse",
+      "chapter": 21,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Gênesis",
+      "chapter": 28,
+      "verse": 15,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Êxodo",
+      "chapter": 14,
+      "verse": 14,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Deuteronômio",
+      "chapter": 31,
+      "verse": 8,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Deuteronômio",
+      "chapter": 33,
+      "verse": 27,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Josué",
+      "chapter": 1,
+      "verse": 8,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 23,
+      "verse": 3,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 103,
+      "verse": 5,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 19,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 8,
+      "verse": 32,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "João",
+      "chapter": 15,
+      "verse": 13,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 12,
+      "verse": 21,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 15,
+      "verse": 7,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 13,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "2 Coríntios",
+      "chapter": 1,
+      "verse": 4,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Gálatas",
+      "chapter": 6,
+      "verse": 2,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Efésios",
+      "chapter": 2,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Filipenses",
+      "chapter": 1,
+      "verse": 21,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Colossenses",
+      "chapter": 3,
+      "verse": 17,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Hebreus",
+      "chapter": 11,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Tiago",
+      "chapter": 4,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 32,
+      "verse": 7,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 91,
+      "verse": 11,
+      "slots": [
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 92,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 18,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 100,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 9,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 145,
+      "verse": 1,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "1 Pedro",
+      "chapter": 5,
+      "verse": 6,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "1 João",
+      "chapter": 4,
+      "verse": 16,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 119,
+      "verse": 50,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 5,
+      "verse": 11,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 116,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Eclesiastes",
+      "chapter": 7,
+      "verse": 8,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Romanos",
+      "chapter": 8,
+      "verse": 39,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 23,
+      "verse": 5,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Salmos",
+      "chapter": 105,
+      "verse": 1,
+      "slots": [
+        "manha",
+        "tarde",
+        "noite"
+      ]
+    },
+    {
+      "book": "Provérbios",
+      "chapter": 31,
+      "verse": 25,
+      "slots": [
+        "manha"
+      ]
+    },
+    {
+      "book": "1 Coríntios",
+      "chapter": 16,
+      "verse": 13,
       "slots": [
         "manha",
         "tarde",
